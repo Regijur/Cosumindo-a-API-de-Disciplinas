@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosumindo API</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./requests.js" defer></script>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Consumindo API</h1>
+        <a href="https://github.com/Regijur/Implementando-API-de-Disciplinas-e-Assuntos-e-Rotas-do-Servidor" target="_blank" rel="noopener noreferrer">Clique para acessar o repositório da API</a>
+    </header>
+    <main>
+        <div id="update-table-field">
+            <button id="update-table-button">Atualizar Tabela</button>
+        </div>
+        <div id="add-table-field">
+            <form id="add-table-form">
+                <label for="Discipline">Disciplina: </label>
+                <input type="text" name="Discipline" id="add-table-discipline" required>
+                <label for="Assuntos">Assuntos: </label>
+                <textarea name="Assuntos" placeholder="Digite os assuntos da disciplina" id="add-table-subjects" cols="30" rows="10" required></textarea>
+                <input id="add-table-submit-button" type="submit" value="Enviar">
+            </form>
+        </div>
+        <div id="table-field">
+            <table id="table">
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Assuntos</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
