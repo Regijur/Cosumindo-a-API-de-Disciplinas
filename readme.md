@@ -1,4 +1,5 @@
 # Consumindo API
+_Desenvolvido por [**Reginaldo Mota (O Régis)**](https://oregis.dev.br)_
 
 ### Considerações iniciais
 Anteriormente eu criei uma API que retorna por padrão um **JSON** com atributos **Disciplina** e **Assuntos**, basicamente um objeto que lista algumas disciplinas e as relaciona com os conteúdos estudados pela mesma.
@@ -19,4 +20,3 @@ Adicionar Disciplina|POST|Há um formulário que ao ser preenchido adiciona uma 
 Atualizar Disciplina|PUT|Há um formulário que ao ser preenchido e submetido atualiza uma disciplina na **API**
 Remover Disciplina | DELETE | Pressionar o botão de deletar da página a disciplina especificada no formulário de remoção é removida da **API**
 
-Desenvolvido por [**Reginaldo Mota (O Régis)**](https://oregis.dev.br)
