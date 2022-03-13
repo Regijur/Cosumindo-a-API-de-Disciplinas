@@ -13,7 +13,7 @@ O intuito principal é compreender como funcionam os tipos de requisição web, 
 No site existem as seguintes funionalidades
 
 Nome da Ação|Método|Descrição
-:------------:|:-----:|:----
+:------------:|:-----:|----
 Atualizar Tabela|GET|Há um botão na página que ao ser clicado atualiza a tabela
 Adicionar Disciplina|POST|Há um formulário que ao ser preenchido adiciona uma disciplina na **API**
 Atualizar Disciplina|PUT|Há um formulário que ao ser preenchido e submetido atualiza uma disciplina na **API**
