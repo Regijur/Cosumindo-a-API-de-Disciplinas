@@ -9,7 +9,7 @@ const doGet = () => {
 const doPost = (body) => {
     
     return axios.post(url,body)
-    .then(response => response.data)
+    .then(response => response)
     .catch(error => console.log(`Erro ao tentar atualizar ${body.Disciplina}`))
 
 }

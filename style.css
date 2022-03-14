@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+    --background-color: #1e1142;
+    --background-footer-color: #160c30;
+    --second-color: #0e0e1a;
+    --main-text-color: #feeeee;
+    --button-color: #13043a;
+    --border-color: #452b8f;
+    --background-focused: #673be0;
+    --input-background: #ad9bdf;
+    --svg-color: #eeeeee;
+    --hover-color: #510153;
+    --text-color-dark: rgb(2, 3, 43);
+    --border-size: 0.15rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
+    padding: 2rem 6rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    max-width: 80vw;
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#repository-button{
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 2rem;
+    border: solid var(--border-color) var(--border-size);
+    text-decoration: none;
+    color: var(--main-text-color);
+    margin-top: 0.5rem;
+    font-size: 1.09rem;
+    text-align: center;
+}
+
+#tittle-page{
+    font-size: 1.2rem;
+}
+
+#add-discipline-form, #update-discipline-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.tittle-section{
+    text-align: center;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.2rem;
+}
+
+#update-table-button{
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.09rem;
+    font-weight: 400;
+}
+
+#manipulation-table-field {
+    display: grid;
+    grid-template-areas: 'addsection update' 'delete delete';
+    gap: 1rem;
+}
+
+.section-field{
+    margin-top: 1.5rem;
+    background: var(--background-color);
+    padding: 1rem 2rem 1.5rem 2rem;
+    border-radius: 4rem;
+    border: solid var(--border-color) var(--border-size);
+}
+
+#add-section{
+    grid-area: addsection;
+}
+
+#update-section{
+    grid-area: update;
+}
+
+#delete-section{
+    grid-area: delete;
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-manipulator-button{
+    background: var(--button-color);
+    padding: 0.5rem;
+    border: solid var(--border-size) var(--border-color);
+    border-radius: 3rem;
+    cursor: pointer;
+    color: var(--main-text-color);
+    transition: background-color 0.5s;
+}
+
+.table-manipulator-button:hover{
+    background: var(--hover-color);
+}
+
+.form-field{
+    margin-top: 0.5rem;
+}
+
+.input-text{
+    outline: none;
+    background: var(--input-background);
+    color: var(--text-color-dark);
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+    border: solid var(--border-size) var(--background-focused);
+    margin: 0.3rem 0;
+    font-size: 1rem;
+}
+
+.input-text:focus{
+    color: var(--main-text-color);
+    border: solid var(--border-size) var(--border-color);
+    background: var(--background-focused);
+}
+
+.input-discipline-name{
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+.input-subjects{
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+    resize: none;
+}
+
+.input-subjects::placeholder{
+    color: var(--text-color-dark);
+    font-size: 1rem;
+}
+
+.input-subjects:focus::placeholder{
+    color: var(--main-text-color);
+}
+
+.input-subjects:invalid{
+    color: red;
+}
+
+.input-subjects::-webkit-scrollbar, html::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+.input-subjects::-webkit-scrollbar-track, html::-webkit-scrollbar-track {
+    background: var(--background-color);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+  
+/* Handle */
+.input-subjects::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+.input-subjects::-webkit-scrollbar-thumb:hover, html::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+}
+
+.input-subjects::-webkit-scrollbar-corner{
+    background-color: red;
+}
+
+#table-field{
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--main-text-color);
+    background: var(--background-color);
+    border-radius: 1rem;
+    border: solid var(--border-size) var(--border-color);
+}
+
+#table{
+    margin-top: 0.5rem;
+    border-spacing: 0.5rem;
+    display: flexbox;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.table-row{
+    background: #673be0;
+}
+
+.table-column{
+    width: auto;
+    padding: 2rem 1rem;
+    border: solid 0.3rem var(--border-color);
+    border-radius: 1rem;
+}
+
+.table-discipline{
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.table-subjects{
+    line-height: 3rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+    padding-left: 3rem;
+}
+
+#discipline-header-tittle, #subjects-header-tittle{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.svg{
+    fill: var(--svg-color);
+    margin-right: 1rem;
+}
+
+.tittle-field{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+#footer-top{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    background: var(--second-color);
+    border-top: solid var(--border-size) var(--border-color);
+    text-align: center;
+}
+
+#social-field{
+    padding: 1rem;
+}
+
+.svg-social{
+    fill: var(--svg-color);
+    margin: 0.6rem;
+    transition: fill 0.5s;
+}
+
+.social-link{
+    padding: 0.5rem;
+}
+
+.svg-social:hover{
+    fill: var(--hover-color);
+}
+
+#footer-bottom{
+    padding: 0.5rem 0;
+    text-align: center;
+    background: var(--background-footer-color);
+    font-size: 0.8rem;
+}
+
+
+@media (max-width: 1250px){
+    #manipulation-table-field{
+        grid-template-areas: "addsection" "update" "delete";
+        align-items: center;
+        justify-content: center;
+        width: auto;
+    }
+}
+
+@media (max-width: 900px){
+    main{
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    #discipline-header-tittle, #subjects-header-tittle{
+        font-size: 1.5rem;
+    }
+    
+    .table-row, .table-column{
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .table-subjects{
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 600px){
+    .section-field{
+        width: 80%;
+        margin: 1rem auto 0 auto;
+    }
+    
+    #table-field{
+        font-size: 1rem;
+    }
+
+    #discipline-header-tittle, #subjects-header-tittle{
+        font-size: 1rem;
+    }
+    
+    .table-row, .table-column{
+        font-size: 1rem;
+        padding: 0;
+    }
+    
+    #delete-discipline-form{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px){
+    .section-field{
+        width: 60%;
+    }
+}
+
+@media (max-width: 400px){
+    main{
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    #header{
+        font-size: 0.9rem;
+    }
+
+    #repository-button{
+        margin: 1rem 2rem;
+        font-size: 0.7rem;
+    }
+    #table-field{
+        font-size: 0.7rem;
+    }
+
+    #discipline-header-tittle, #subjects-header-tittle{
+        font-size: 0.7rem;
+    }
+    
+    .table-row, .table-column{
+        font-size: 0.7rem;
+        padding: 0;
+    }
+
+    #footer-top {
+        font-size: 1rem;
+        margin: 1rem 0 0 0;
+        padding: 2rem 0.5rem;
+    }
+    #footer-top > *{
+        padding: 0;
+        margin: 0;
+    }
+    #manipulation-table-field{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
